@@ -1,0 +1,51 @@
+:root {
+    --primary: #f5f7fa;
+}
+
+.content {
+    position: relative;
+    flex: 1;
+}
+
+.content__container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content__heading {
+    color: var(--primary);
+    font-size: 4.2rem;
+}
+
+.content__text {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 2.1rem;
+    margin: 1.5rem auto 0;
+    width: 90%;
+    line-height: 2;
+    font-family: "Lato";
+}
+
+.content__link {
+    background-image: linear-gradient(to right bottom, #009efd, #2575fc);
+    padding: 1.3rem 3rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+    text-decoration: none;
+    color: var(--primary);
+    display: block;
+    margin: 2.7rem auto 0;
+    width: 30%;
+}
+
+.content__link:hover {
+    transform: scale(1.1);
+}
+
+.content__link:active {
+    transform: translateY(1px);
+}
