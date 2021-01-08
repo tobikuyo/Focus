@@ -5,10 +5,11 @@ import "./Navbar.css";
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <h1 className="navbar__logo">focus</h1>
+            <h2 className="navbar__logo">focus</h2>
 
             <div className="navbar__links">
                 <Link to="/#about">About</Link>
+                <Link to="/#discover">Discover</Link>
                 <Link to="/#services">Services</Link>
             </div>
 

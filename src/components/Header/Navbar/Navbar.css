@@ -26,8 +26,17 @@
 }
 
 .navbar__contact {
-    background-image: linear-gradient(to right bottom, #66a6ff, #009efd);
-    padding: 1.1rem 1.4rem;
-    border-radius: 2rem;
+    background-image: linear-gradient(to right bottom, #009efd, #2575fc);
+    padding: 1.1rem 1.5rem;
+    border-radius: 3rem;
     font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.navbar__contact:hover {
+    transform: scale(1.1);
+}
+
+.navbar__contact:active {
+    transform: translateY(1px);
 }
