@@ -1,11 +1,13 @@
 import React from "react";
-import Header from "./components/Header";
+import Header from "./sections/Header";
+import About from "./sections/About";
 import "./App.css";
 
 const App = () => {
     return (
         <div>
             <Header />
+            <About />
         </div>
     );
 };
