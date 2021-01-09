@@ -1,0 +1,24 @@
+.about {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-evenly;
+    background-color: #fff;
+    margin: 6rem;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    flex: 0.7;
+}
+
+.about__heading {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.about__img {
+    height: 60%;
+    border-radius: 1rem;
+}
