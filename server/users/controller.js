@@ -3,7 +3,7 @@ const db = require("../database");
 exports.getAllUsers = async (req, res, next) => {
     try {
         const users = await db.query("SELECT * FROM users");
-        res.status(200).json(users.rows);
+        res.status(200).json({ results: users.rows.length, users: users.rows });
     } catch (error) {
         next(error);
     }
