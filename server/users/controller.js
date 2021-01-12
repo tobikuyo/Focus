@@ -9,7 +9,7 @@ exports.getAllUsers = async (req, res, next) => {
     }
 };
 
-exports.createUser = async (req, res, next) => {
+exports.addUser = async (req, res, next) => {
     try {
         const { name, email, message } = req.body;
         const user = await db.query(
