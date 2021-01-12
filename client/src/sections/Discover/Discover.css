@@ -16,10 +16,6 @@
     flex: 0.65;
 }
 
-.discover__heading {
-    font-size: 3.2rem;
-}
-
 .discover__text {
     margin: 1rem 0 2.5rem;
     max-width: 500px;

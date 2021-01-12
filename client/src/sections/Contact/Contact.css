@@ -19,10 +19,6 @@
     width: 60%;
 }
 
-.contact__heading {
-    font-size: 3.2rem;
-}
-
 .contact__subheading {
     margin: 0.5rem 0 2.5rem;
     font-size: 1.5rem;
@@ -40,6 +36,7 @@
     outline-width: 0;
     padding: 1.5rem 1rem;
     margin-bottom: 2.5rem;
+    font-weight: 500;
 }
 
 .contact__form-textarea {
@@ -52,6 +49,12 @@
     line-height: 2.3;
     resize: none;
     margin-bottom: 2.5rem;
+    font-weight: 500;
+}
+
+.contact__form-input::placeholder,
+.contact__form-textarea::placeholder {
+    color: #c0c0c0;
 }
 
 .contact__form-btn {
@@ -62,6 +65,7 @@
     height: 4.5rem;
     font-size: 1.4rem;
     color: #f5f5f5;
+    outline-width: 0;
     cursor: pointer;
 }
 
@@ -73,7 +77,7 @@
     width: 35%;
 }
 
-.contact__copy {
+.copy {
     position: absolute;
     bottom: 10px;
     font-size: 1.4rem;
