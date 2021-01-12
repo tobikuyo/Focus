@@ -41,3 +41,9 @@
 .navbar__contact:active {
     transform: translateY(1px);
 }
+
+@media screen and (max-width: 1200px) {
+    .navbar {
+        padding: 2.5rem 10rem;
+    }
+}

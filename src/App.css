@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Encode Sans Expanded", sans-serif;
+    overflow-x: hidden;
 }
 
 html {
@@ -12,4 +13,16 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 2;
+}
+
+@media screen and (min-width: 1800px) {
+    html {
+        font-size: 72%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 57%;
+    }
 }

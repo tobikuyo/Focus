@@ -3,6 +3,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    background-attachment: fixed;
     background-size: cover;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.85)),
         url("../../images/header.jpg");

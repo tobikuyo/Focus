@@ -12,6 +12,7 @@
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 80%;
 }
 
 .content__heading {
@@ -25,7 +26,7 @@
     font-weight: 400;
     font-size: 2.1rem;
     margin: 1.5rem auto 0;
-    width: 80%;
+    width: 60rem;
 }
 
 .content__link {
@@ -38,7 +39,7 @@
     color: var(--primary);
     display: block;
     margin: 4rem auto 0;
-    width: 30%;
+    width: 20%;
     cursor: pointer;
 }
 
