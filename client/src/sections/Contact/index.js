@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import axiosInstance from "../../api";
 import contact from "../../images/contact.svg";
 import "./Contact.css";
@@ -11,6 +12,7 @@ const initialDetails = {
 
 const Contact = () => {
     const [details, setDetails] = useState(initialDetails);
+    const { push } = useHistory();
 
     const handleChanges = event => {
         setDetails({ ...details, [event.target.name]: event.target.value });
@@ -22,6 +24,7 @@ const Contact = () => {
         try {
             await axiosInstance.post("/", details);
             setDetails(initialDetails);
+            push("/thankyou");
         } catch (error) {
             console.log("GET Users", error);
         }
@@ -59,7 +62,7 @@ const Contact = () => {
                         <textarea
                             name="message"
                             className="contact__form-textarea"
-                            placeholder="Leave us a message or some feedback if you'd like to"
+                            placeholder="Feel free to leave us a message or some feedback..."
                             value={details.message}
                             onChange={handleChanges}
                         />
@@ -70,7 +73,7 @@ const Contact = () => {
                 </div>
                 <img src={contact} alt="contact us" className="contact__image" />
             </div>
-            <p className="contact__copy">&copy; 2021 Focus Group</p>
+            <p className="copy">&copy; 2021 Focus Group</p>
         </div>
     );
 };
