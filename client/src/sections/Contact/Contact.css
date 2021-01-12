@@ -73,6 +73,23 @@
     background: linear-gradient(to right bottom, #038bdf, #2575fc);
 }
 
+.contact__form-btn:disabled {
+    background-color: lightgrey;
+    cursor: not-allowed;
+}
+
+.contact__form-error {
+    color: red;
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin: -2rem 0 2rem 1rem;
+    margin-top: -20px;
+}
+
+.contact__form-error::first-letter {
+    text-transform: capitalize;
+}
+
 .contact__image {
     width: 35%;
 }

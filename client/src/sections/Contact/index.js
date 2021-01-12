@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import * as yup from "yup";
 import axiosInstance from "../../api";
 import contact from "../../images/contact.svg";
 import "./Contact.css";
@@ -10,11 +11,35 @@ const initialDetails = {
     message: ""
 };
 
+const initialErrors = {
+    name: "",
+    email: ""
+};
+
 const Contact = () => {
     const [details, setDetails] = useState(initialDetails);
+    const [errors, setErrors] = useState(initialErrors);
+
     const { push } = useHistory();
 
+    const schema = yup.object().shape({
+        name: yup.string().required("Name is required"),
+        email: yup.string().email().required("Email is required"),
+        message: yup.string()
+    });
+
+    const validateChange = async event => {
+        try {
+            await yup.reach(schema, event.target.name).validate(event.target.value);
+            setErrors({ ...errors, [event.target.name]: "" });
+        } catch (error) {
+            setErrors({ ...errors, [event.target.name]: error.errors[0] });
+        }
+    };
+
     const handleChanges = event => {
+        event.persist();
+        validateChange(event);
         setDetails({ ...details, [event.target.name]: event.target.value });
     };
 
@@ -26,7 +51,7 @@ const Contact = () => {
             setDetails(initialDetails);
             push("/thankyou");
         } catch (error) {
-            console.log("GET Users", error);
+            console.log("POST Users", error.detail);
         }
     };
 
@@ -50,6 +75,9 @@ const Contact = () => {
                             onChange={handleChanges}
                             required
                         />
+                        {errors.name.length > 0 && (
+                            <p className="contact__form-error">{`${errors.name}`}</p>
+                        )}
                         <input
                             name="email"
                             type="email"
@@ -59,6 +87,9 @@ const Contact = () => {
                             onChange={handleChanges}
                             required
                         />
+                        {errors.email.length > 0 && (
+                            <p className="contact__form-error">{`${errors.email}`}</p>
+                        )}
                         <textarea
                             name="message"
                             className="contact__form-textarea"
