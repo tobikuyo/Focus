@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axiosInstance from "../../api";
 import contact from "../../images/contact.svg";
 import "./Contact.css";
 
@@ -15,6 +16,17 @@ const Contact = () => {
         setDetails({ ...details, [event.target.name]: event.target.value });
     };
 
+    const handleSubmit = async event => {
+        event.preventDefault();
+
+        try {
+            await axiosInstance.post("/", details);
+            setDetails(initialDetails);
+        } catch (error) {
+            console.log("GET Users", error);
+        }
+    };
+
     return (
         <div className="contact">
             <div className="contact__container">
@@ -25,7 +37,7 @@ const Contact = () => {
                         the service is available.
                     </p>
 
-                    <form className="contact__form">
+                    <form onSubmit={handleSubmit} className="contact__form">
                         <input
                             name="name"
                             type="text"
