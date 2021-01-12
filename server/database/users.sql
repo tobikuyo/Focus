@@ -1,0 +1,8 @@
+CREATE DATABASE focus;
+
+CREATE TABLE users (
+    id BIGSERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email VARCHAR(30)  NOT NULL UNIQUE,
+    message TEXT
+);
