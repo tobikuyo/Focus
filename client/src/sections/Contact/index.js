@@ -20,7 +20,7 @@ const Contact = () => {
     const [details, setDetails] = useState(initialDetails);
     const [errors, setErrors] = useState(initialErrors);
 
-    const { push } = useHistory();
+    const history = useHistory();
 
     const schema = yup.object().shape({
         name: yup.string().required("Name is required"),
@@ -49,7 +49,7 @@ const Contact = () => {
         try {
             await axiosInstance.post("/", details);
             setDetails(initialDetails);
-            push("/thankyou");
+            history.push("/thankyou");
         } catch (error) {
             console.log("POST Users", error.detail);
         }
