@@ -21,3 +21,16 @@ exports.addUser = async (req, res, next) => {
         next(error);
     }
 };
+
+exports.addTestUser = async (req, res, next) => {
+    try {
+        const { name, email, message } = req.body;
+        const user = await db.query(
+            "INSERT INTO test (name, email, message) VALUES ($1, $2, $3) RETURNING *",
+            [name, email, message || null]
+        );
+        res.status(201).json(user.rows[0]);
+    } catch (error) {
+        next(error);
+    }
+};

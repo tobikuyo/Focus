@@ -6,3 +6,10 @@ CREATE TABLE users (
     email VARCHAR(30)  NOT NULL UNIQUE,
     message TEXT
 );
+
+CREATE TABLE test (
+    id BIGSERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email VARCHAR(30)  NOT NULL UNIQUE,
+    message TEXT
+);
