@@ -36,6 +36,12 @@
 
     .about__content {
         flex: none;
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .about__img {
+        width: 100%;
     }
 }
