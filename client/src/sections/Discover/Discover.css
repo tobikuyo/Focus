@@ -4,10 +4,11 @@
     height: 100vh;
     justify-content: space-evenly;
     background-color: #f5f5f5;
+    padding: 6rem;
 }
 
 .discover__img {
-    height: 50rem;
+    width: 40rem;
 }
 
 .discover__content {
@@ -49,15 +50,24 @@
     .discover__content {
         flex: none;
         margin: 40px auto 80px;
-        /* height: 25%; */
-    }
-
-    .discover__img {
-        height: 35rem;
     }
 
     .discover__link {
         margin-top: 20px;
         align-self: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .discover {
+        height: fit-content;
+    }
+
+    .discover__heading {
+        line-height: 1.5;
+    }
+
+    .discover__img {
+        width: 60%;
     }
 }
