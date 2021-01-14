@@ -47,3 +47,15 @@
         padding: 2.5rem 10rem;
     }
 }
+
+@media screen and (max-width: 850px) {
+    .navbar {
+        display: block;
+        padding: 5rem 0;
+    }
+
+    .navbar__links,
+    .navbar__contact {
+        display: none;
+    }
+}

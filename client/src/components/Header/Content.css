@@ -33,7 +33,7 @@
 .content__link {
     background-image: linear-gradient(to right bottom, #009efd, #2575fc);
     padding: 1.3rem 3rem;
-    border-radius: 3rem;
+    border-radius: 30px;
     font-size: 1.5rem;
     transition: transform 0.3s;
     text-decoration: none;
@@ -50,4 +50,27 @@
 
 .content__link:active {
     transform: translateY(1px);
+}
+
+@media screen and (max-width: 850px) {
+    .content__link {
+        font-size: 1.8rem;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .content__heading {
+        font-size: 2.8rem;
+    }
+
+    .content__text {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .content__link {
+        width: 80%;
+    }
 }
