@@ -101,3 +101,57 @@
     font-weight: 500;
     color: #2c3539;
 }
+
+@media screen and (max-width: 850px) {
+    .contact {
+        height: max-content;
+    }
+
+    .contact__container {
+        text-align: center;
+        flex-direction: column-reverse;
+        padding: 0 3rem;
+    }
+
+    .contact__content {
+        width: 80%;
+    }
+
+    .contact__form {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact__heading {
+        margin: 3rem auto 0;
+    }
+
+    .contact__form-input,
+    .contact__form-textarea {
+        width: 100%;
+    }
+
+    .contact__form-error {
+        align-self: start;
+    }
+
+    .contact__form-btn {
+        margin-bottom: 10rem;
+    }
+
+    .contact__image {
+        width: 60%;
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contact__form-btn {
+        width: 80%;
+        height: 5rem;
+    }
+
+    .copy {
+        font-size: 1.1rem;
+    }
+}
