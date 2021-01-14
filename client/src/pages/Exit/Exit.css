@@ -14,11 +14,17 @@
 }
 
 .exit__image {
-    height: 25rem;
+    width: 28rem;
     margin-bottom: 30px;
 }
 
 .exit__text {
     font-size: 1.9rem;
     color: #2c3539;
+}
+
+@media screen and (max-width: 450px) {
+    .exit__text {
+        font-size: 1.6rem;
+    }
 }
