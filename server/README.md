@@ -18,9 +18,7 @@ To Visit App:
 
 `localhost:8000/api`
 
-<br>
-
-# Endpoints
+### Endpoints:
 
 <details>
 <summary>POST: /users - adds a new user</summary>
@@ -102,11 +100,12 @@ Expected Response
 
 </details>
 
-<br>
-
-# Database
+### Database:
 
 <details>
     <summary>Image of Database Layout</summary>
-    ![Database](schema.png)
+    <br>
+
+![Database](schema.png)
+
 </details>
