@@ -12,13 +12,15 @@ Run Test Suite:
 
 Start Server:
 
-`npm start`
+`npm start` or `npm run server` (to use nodemon)
 
 To Visit App:
 
 `localhost:8000/api`
 
-### Endpoints:
+<br>
+
+### Endpoints
 
 <details>
 <summary>POST: /users - adds a new user</summary>
@@ -100,7 +102,9 @@ Expected Response
 
 </details>
 
-### Database:
+<br>
+
+### Database
 
 <details>
     <summary>Image of Database Layout</summary>
